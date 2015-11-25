@@ -1,0 +1,158 @@
+$layout-w: 1171px;
+$base-color: #fff;
+$header-h: 89px;
+$brown: #683817;
+$products-in-cart-circle-size: 25px;
+//$screen-1280: 1280px;
+//$max-body-w: 1900px;
+//$main-h: 989px;
+//$menu-padding-right-w: 32px;
+//$menu-icon-w: 28px;
+//$menu-icon-h: 17px;
+//$max-contacts-w: 480px;
+//$logo-w: 96px;
+//$logo-h: 123px;
+//$programs-table-h: 1074px;
+//$max-organize-block-w: 860px;
+//$programs-list-bottom-margin: 16px;
+//$programs-list-item-h: 58px;
+//$side-block-w: 416px;
+//$arrow-w: 16px;
+//$arrow-h: 14px;
+//$base-color: #fff;
+//$table-padding: 44px;
+//$more-btn-w: 213px;
+//$more-btn-h: 49px;
+//$max-dark-section-description-w: 560px;
+//$light-gray: rgb(248, 248, 248);
+//$black: rgb(68, 68, 68);
+//$gray: #666;
+//$middle-gray: #999;
+//$orange: #C9A244;
+//$extralight-gray: #d1d1d1;
+//$light-brown: #dfb245;
+//$dark-black: rgb(51, 51, 51);
+//$yellow: rgb(255, 201, 70);
+//$main-wrapper-w: 1006px;
+//$checkbox-size: 16px;
+//$input-h: 48px;
+//$textarea-h: 150px;
+//$social-item-size: 29px;
+//$vk-icon-w: 32px;
+//$vk-icon-h: 18px;
+//$small-side-block-w: 126px;
+//$light-brown: #9e7616;
+//$light-black: #221E1F;
+//$screen-1366: 1366px;
+//$radio-size: 19px;
+//$bg-color: #a17919;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-width: $layout-w;
+  max-width: 100%;
+  color: $base-color;
+  font: {
+    family: "Circe-Regular", sans-serif;
+    size: 14px;
+  }
+  text-align: left;
+}
+
+.invisible {
+  display: none !important;
+}
+
+.noscroll {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.layout-center-wrapper {
+  position: relative;
+  width: $layout-w;
+  display: block;
+  margin: 0 auto;
+}
+
+.clearfix:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+a {
+  color: $base-color;
+}
+
+.btn {
+  text: {
+    align: center;
+    decoration: none;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  display: inline-block;
+}
+
+.text-block {
+  font: {
+    family: "Circe-Light", sans-serif;
+    size: 18px;
+  }
+  line-height: 1.2;
+  padding-bottom: 15px;
+  span {
+    font: {
+      family: "Circe-Bold", sans-serif;
+    }
+  }
+}
+
+.section-title {
+  line-height: 1.2;
+  font: {
+    family: "Circe-Bold", sans-serif;
+    size: 48px;
+  }
+  text-transform: uppercase;
+}
+
+header {
+  position: relative;
+  @include size(100%, $header-h);
+  background: $brown;
+  .cart {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    @include size(80px, 67px);
+    background: url(../images/cart.png) 0 0 no-repeat;
+    .products-in-cart {
+      @include size($products-in-cart-circle-size, $products-in-cart-circle-size);
+      position: absolute;
+      top: 19px;
+      left: 0;
+      text-align: center;
+      line-height: $products-in-cart-circle-size + 2;
+    }
+  }
+  .logo {
+    top: 22px;
+    left: 33px;
+    position: absolute;
+    @include size(143px, 45px);
+    background: url(../images/logo.png) 0 0 no-repeat;
+  }
+}
