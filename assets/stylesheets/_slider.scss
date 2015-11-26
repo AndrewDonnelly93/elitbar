@@ -1,0 +1,101 @@
+$slider-h: 495px;
+$slider-img-w: 1920px;
+$pagination-size: 10px;
+$navigation-buttons-w: 30px;
+$navigation-buttons-h: 68px;
+
+%navigation-buttons {
+  display: block;
+  position: absolute;
+  top: 218px;
+  text-indent: -9999px;
+  z-index: 11;
+  @include size($navigation-buttons-w, $navigation-buttons-h);
+}
+
+.slider-wrapper {
+  @include size(100%, $slider-h);
+  position: relative;
+}
+
+.slider {
+  @include size(100%, $slider-h);
+  position: relative;
+  .item {
+    position: relative;
+    @include size(100%, $slider-h);
+    display: block;
+    a {
+      z-index: 2;
+      @extend %full-size-absolute;
+      display: block;
+    }
+    .slider-img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -1/2 * $slider-img-w;
+      @include size($slider-img-w, $slider-h);
+    }
+    .info {
+      position: absolute;
+      bottom: 50px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      .item-name {
+        text-transform: uppercase;
+        font: {
+          family: "FranklinGothic-Demi", sans-serif;
+          size: 48px;
+        }
+        margin-bottom: 10px;
+      }
+      .item-description {
+        font: {
+          family: "21_centitalic";
+          size: 24px;
+          style: italic;
+        }
+      }
+    }
+  }
+}
+
+.prev-button {
+  @extend %navigation-buttons;
+  background: url(../images/left-arrow.png) 0 0 no-repeat;
+  left: 32px;
+}
+.next-button {
+  @extend %navigation-buttons;
+  background: url(../images/right-arrow.png) 0 0 no-repeat;
+  right: 32px;
+}
+
+.pagination {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 23px;
+  text-align: center;
+  a {
+    position: relative;
+    z-index: 11;
+    text-indent: -9999px;
+    display: inline-block;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include size($pagination-size, $pagination-size);
+    background: $black;
+    @include border-radius(50%);
+    &:hover {
+      background: $base-color;
+    }
+    &.selected {
+      background: $base-color;
+    }
+  }
+}

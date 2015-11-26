@@ -100,6 +100,14 @@ input[type="date"] {
   -webkit-padding-start: 1px;
 }
 
+@mixin transition($transition-param) {
+  -webkit-transition: $transition-param;
+  -moz-transition: $transition-param;
+  -ms-transition: $transition-param;
+  -o-transition: $transition-param;
+  transition: $transition-param;
+}
+
 ::-webkit-datetime-edit { padding: 0 1em; }
 ::-webkit-datetime-edit-fields-wrapper { background: #fff }
 ::-webkit-datetime-edit-text { color: #333; padding: 0 0.3em; }

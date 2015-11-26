@@ -1,8 +1,13 @@
 $layout-w: 1171px;
 $base-color: #fff;
-$header-h: 89px;
 $brown: #683817;
-$products-in-cart-circle-size: 25px;
+$products-in-cart-circle-size: 27px;
+$contacts-form-ref-h: 34px;
+$gray: #666;
+$black: #333;
+$dropdown-w: 223px;
+$search-field-h: 67px;
+$search-field-w: 242px;
 //$screen-1280: 1280px;
 //$max-body-w: 1900px;
 //$main-h: 989px;
@@ -131,28 +136,177 @@ a {
 
 header {
   position: relative;
-  @include size(100%, $header-h);
+  width: 100%;
+  @include border-box;
+  padding: 29px 0;
   background: $brown;
+  .contacts {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+  .phone {
+    vertical-align: top;
+    font: {
+      family: "FranklinGothic-Demi", sans-serif;
+      size: 21px;
+    }
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .contacts-form-ref {
+    vertical-align: top;
+    text-decoration: none;
+    color: $base-color;
+    height: $contacts-form-ref-h;
+    line-height: $contacts-form-ref-h - 1;
+    @include border-radius(13px);
+    padding: 0 15px;
+    font: {
+      family: "FranklinGothic-Demi", sans-serif;
+      size: 18px;
+    }
+    display: inline-block;
+    background: $black;
+    position: relative;
+  }
   .cart {
+    display: block;
     position: absolute;
     top: 12px;
     right: 10px;
     @include size(80px, 67px);
     background: url(../images/cart.png) 0 0 no-repeat;
     .products-in-cart {
+      font: {
+        family: "FranklinGothic-Book", sans-serif;
+        size: 14px;
+      }
+      color: $base-color;
+      display: block;
       @include size($products-in-cart-circle-size, $products-in-cart-circle-size);
       position: absolute;
-      top: 19px;
+      top: 20px;
       left: 0;
       text-align: center;
-      line-height: $products-in-cart-circle-size + 2;
+      line-height: $products-in-cart-circle-size;
     }
   }
   .logo {
-    top: 22px;
+    top: 23px;
     left: 33px;
     position: absolute;
     @include size(143px, 45px);
     background: url(../images/logo.png) 0 0 no-repeat;
+  }
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  padding: 30px 0 35px;
+  text-align: center;
+  .dropdown {
+    display: inline-block;
+    list-style: none;
+    margin: 0 auto;
+    &>li {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px;
+      a {
+        display: block;
+        color: $black;
+        text-decoration: none;
+        font: {
+          family: "FranklinGothic-Demi", sans-serif;
+          size: 21px;
+        }
+      }
+      &:last-child {
+        margin-top: 0;
+      }
+    }
+    ul {
+      top: 44px;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 25px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 11px 11px 11px;
+        border-color: transparent transparent $black transparent;
+        top: -11px;
+      }
+      text-align: left;
+      list-style: none;
+      width: $dropdown-w;
+      @include border-box;
+      background: $black;
+      padding: 10px 20px 10px 25px;
+      li {
+        display: block;
+        margin-bottom: 10px;
+        a {
+          display: block;
+          text-decoration: none;
+          @extend %text-overflow;
+          font: {
+            family: "21_centbold";
+            size: 20px;
+            weight: bold;
+          }
+          color: $base-color;
+        }
+      }
+    }
+  }
+  .search-field {
+    position: absolute;
+    &:hover {
+      cursor: pointer;
+    }
+    top: 11px;
+    right: 11px;
+    @include size($search-field-h, $search-field-h);
+    .search-icon {
+      display: block;
+      text-indent: -9999px;
+      position: absolute;
+      @include size($search-field-h, $search-field-h);
+      top: 0;
+      right: 0;
+      z-index: 2;
+      background: url(../images/search.png) 0 0 no-repeat;
+    }
+    label {
+      display: none;
+    }
+    input[type="search"] {
+      @include transition(all 1s ease-in-out);
+      display: none;
+      background: $black;
+      font: {
+        family: "FranklinGothic-Demi", sans-serif;
+        size: 21px;
+      }
+      line-height: $search-field-h;
+      color: $base-color;
+      @include border-box;
+      @include size($search-field-w, $search-field-h);
+      padding-right: $search-field-h;
+      padding-left: 15px;
+    }
+    &.active {
+      @include size($search-field-w, $search-field-h);
+      input {
+        display: block;
+      }
+    }
   }
 }

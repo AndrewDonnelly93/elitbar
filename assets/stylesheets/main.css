@@ -5,6 +5,7 @@
   src: url("../fonts/21cent-webfont.eot") format("embedded-opentype"), url("../fonts/21cent-webfont.woff") format("woff"), url("../fonts/21cent-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: '21_centbold';
   src: url("../fonts/21cent-bold-webfont.eot") format("embedded-opentype");
@@ -12,6 +13,7 @@
   src: url("../fonts/21cent-bold-webfont.eot") format("embedded-opentype"), url("../fonts/21cent-bold-webfont.woff") format("woff"), url("../fonts/21cent-bold-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: '21_centitalic';
   src: url("../fonts/21cent-italic-webfont.eot") format("embedded-opentype");
@@ -19,6 +21,7 @@
   src: url("../fonts/21cent-italic-webfont.eot") format("embedded-opentype"), url("../fonts/21cent-italic-webfont.woff") format("woff"), url("../fonts/21cent-italic-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: '21_centbold';
   src: url("../fonts/21cent-bold-webfont.eot") format("embedded-opentype");
@@ -26,6 +29,7 @@
   src: url("../fonts/21cent-bold-webfont.eot") format("embedded-opentype"), url("../fonts/21cent-bold-webfont.woff") format("woff"), url("../fonts/21cent-bold-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'FranklinGothic-Book';
   src: url("../fonts/FranklinGothic-Book.eot") format("embedded-opentype");
@@ -33,6 +37,7 @@
   src: url("../fonts/FranklinGothic-Book.eot") format("embedded-opentype"), url("../fonts/FranklinGothic-Book.woff") format("woff"), url("../fonts/FranklinGothic-Book.ttf") format("truetype"), url("../fonts/FranklinGothic-Book.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'FranklinGothic-Demi';
   src: url("../fonts/FranklinGothic-Demi.eot") format("embedded-opentype");
@@ -40,6 +45,19 @@
   src: url("../fonts/FranklinGothic-Demi.eot") format("embedded-opentype"), url("../fonts/FranklinGothic-Demi.woff") format("woff"), url("../fonts/FranklinGothic-Demi.ttf") format("truetype"), url("../fonts/FranklinGothic-Demi.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
+
+nav .dropdown ul li a {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.slider .item a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -58,7 +76,7 @@ textarea:-webkit-autofill:active {
 button {
   border: 0;
   outline: 0;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   outline-width: 0;
   background: 0; }
 
@@ -70,7 +88,7 @@ textarea {
   border: 0;
   outline: 0;
   outline-width: 0;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 input[type="date"] {
   -webkit-align-items: center;
@@ -84,7 +102,7 @@ input[type="date"] {
   padding: 0 1em; }
 
 ::-webkit-datetime-edit-fields-wrapper {
-  background: #fff; }
+  background: white; }
 
 ::-webkit-datetime-edit-text {
   color: #333;
@@ -123,7 +141,7 @@ body {
   width: 100%;
   min-width: 1171px;
   max-width: 100%;
-  color: #fff;
+  color: white;
   font-family: "Circe-Regular", sans-serif;
   font-size: 14px;
   text-align: left; }
@@ -151,7 +169,7 @@ body {
   text-decoration: underline; }
 
 a {
-  color: #fff; }
+  color: white; }
 
 .btn {
   text-align: center;
@@ -177,9 +195,40 @@ a {
 header {
   position: relative;
   width: 100%;
-  height: 89px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 29px 0;
   background: #683817; }
+  header .contacts {
+    margin: 0 auto;
+    display: block;
+    text-align: center; }
+  header .phone {
+    vertical-align: top;
+    font-family: "FranklinGothic-Demi", sans-serif;
+    font-size: 21px;
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    margin-right: 10px; }
+  header .contacts-form-ref {
+    vertical-align: top;
+    text-decoration: none;
+    color: white;
+    height: 34px;
+    line-height: 33px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    padding: 0 15px;
+    font-family: "FranklinGothic-Demi", sans-serif;
+    font-size: 18px;
+    display: inline-block;
+    background: #333333;
+    position: relative; }
   header .cart {
+    display: block;
     position: absolute;
     top: 12px;
     right: 10px;
@@ -187,19 +236,200 @@ header {
     height: 67px;
     background: url(../images/cart.png) 0 0 no-repeat; }
     header .cart .products-in-cart {
-      width: 25px;
-      height: 25px;
+      font-family: "FranklinGothic-Book", sans-serif;
+      font-size: 14px;
+      color: white;
+      display: block;
+      width: 27px;
+      height: 27px;
       position: absolute;
-      top: 19px;
+      top: 20px;
       left: 0;
       text-align: center;
       line-height: 27px; }
   header .logo {
-    top: 22px;
+    top: 23px;
     left: 33px;
     position: absolute;
     width: 143px;
     height: 45px;
     background: url(../images/logo.png) 0 0 no-repeat; }
 
-/*# sourceMappingURL=main.css.map */
+nav {
+  position: relative;
+  width: 100%;
+  padding: 30px 0 35px;
+  text-align: center; }
+  nav .dropdown {
+    display: inline-block;
+    list-style: none;
+    margin: 0 auto; }
+    nav .dropdown > li {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px; }
+      nav .dropdown > li a {
+        display: block;
+        color: #333333;
+        text-decoration: none;
+        font-family: "FranklinGothic-Demi", sans-serif;
+        font-size: 21px; }
+      nav .dropdown > li:last-child {
+        margin-top: 0; }
+    nav .dropdown ul {
+      top: 44px;
+      text-align: left;
+      list-style: none;
+      width: 223px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background: #333333;
+      padding: 10px 20px 10px 25px; }
+      nav .dropdown ul:before {
+        content: "";
+        position: absolute;
+        left: 25px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 11px 11px 11px;
+        border-color: transparent transparent #333333 transparent;
+        top: -11px; }
+      nav .dropdown ul li {
+        display: block;
+        margin-bottom: 10px; }
+        nav .dropdown ul li a {
+          display: block;
+          text-decoration: none;
+          font-family: "21_centbold";
+          font-size: 20px;
+          font-weight: bold;
+          color: white; }
+  nav .search-field {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    width: 67px;
+    height: 67px; }
+    nav .search-field:hover {
+      cursor: pointer; }
+    nav .search-field .search-icon {
+      display: block;
+      text-indent: -9999px;
+      position: absolute;
+      width: 67px;
+      height: 67px;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      background: url(../images/search.png) 0 0 no-repeat; }
+    nav .search-field label {
+      display: none; }
+    nav .search-field input[type="search"] {
+      -webkit-transition: all 1s ease-in-out;
+      -moz-transition: all 1s ease-in-out;
+      -ms-transition: all 1s ease-in-out;
+      -o-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out;
+      display: none;
+      background: #333333;
+      font-family: "FranklinGothic-Demi", sans-serif;
+      font-size: 21px;
+      line-height: 67px;
+      color: white;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 242px;
+      height: 67px;
+      padding-right: 67px;
+      padding-left: 15px; }
+    nav .search-field.active {
+      width: 242px;
+      height: 67px; }
+      nav .search-field.active input {
+        display: block; }
+
+.prev-button, .next-button {
+  display: block;
+  position: absolute;
+  top: 218px;
+  text-indent: -9999px;
+  z-index: 11;
+  width: 30px;
+  height: 68px; }
+
+.slider-wrapper {
+  width: 100%;
+  height: 495px;
+  position: relative; }
+
+.slider {
+  width: 100%;
+  height: 495px;
+  position: relative; }
+  .slider .item {
+    position: relative;
+    width: 100%;
+    height: 495px;
+    display: block; }
+    .slider .item a {
+      z-index: 2;
+      display: block; }
+    .slider .item .slider-img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -960px;
+      width: 1920px;
+      height: 495px; }
+    .slider .item .info {
+      position: absolute;
+      bottom: 50px;
+      left: 0;
+      right: 0;
+      text-align: center; }
+      .slider .item .info .item-name {
+        text-transform: uppercase;
+        font-family: "FranklinGothic-Demi", sans-serif;
+        font-size: 48px;
+        margin-bottom: 10px; }
+      .slider .item .info .item-description {
+        font-family: "21_centitalic";
+        font-size: 24px;
+        font-style: italic; }
+
+.prev-button {
+  background: url(../images/left-arrow.png) 0 0 no-repeat;
+  left: 32px; }
+
+.next-button {
+  background: url(../images/right-arrow.png) 0 0 no-repeat;
+  right: 32px; }
+
+.pagination {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 23px;
+  text-align: center; }
+  .pagination a {
+    position: relative;
+    z-index: 11;
+    text-indent: -9999px;
+    display: inline-block;
+    margin-right: 10px;
+    width: 10px;
+    height: 10px;
+    background: #333333;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; }
+    .pagination a:last-child {
+      margin-right: 0; }
+    .pagination a:hover {
+      background: white; }
+    .pagination a.selected {
+      background: white; }
