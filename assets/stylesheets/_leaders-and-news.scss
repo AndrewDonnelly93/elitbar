@@ -1,0 +1,164 @@
+$basic-table-cell-w: 286px;
+$sales-leaders-list-img-h: 198px;
+$news-img-h: 177px;
+$basic-table-blank-cell-w: 9px;
+$table-gray: #b2b2b2;
+$cart-height: 44px;
+
+.leaders-and-news {
+  padding: 86px 0;
+  background: $base-color;
+  .sales-leaders {
+    padding-bottom: 80px;
+  }
+}
+
+%basic-table {
+  background: $base-color;
+  text-align: left;
+  table-layout: fixed;
+  width: 100%;
+  td {
+    @include border-box;
+    &.content {
+      width: $basic-table-cell-w;
+    }
+    &.blank-cell {
+      width: $basic-table-blank-cell-w;
+    }
+  }
+}
+
+.sales-leaders-list {
+  @extend %basic-table;
+  tr {
+    &.img-row {
+      img {
+        @include size($basic-table-cell-w, $sales-leaders-list-img-h);
+        vertical-align: top;
+        margin-bottom: 0;
+        display: inline-block;
+      }
+    }
+    &.leader-name-row {
+      td {
+        text-align: center;
+        vertical-align: top;
+        text-transform: uppercase;
+        padding: 10px;
+        color: $black;
+        font: {
+          family: "21_centbold";
+          size: 18px;
+          weight: bold;
+        }
+      }
+    }
+    &.leader-unit-row {
+      td {
+        text-align: center;
+        vertical-align: top;
+        font: {
+          family: "21_centitalic";
+          style: italic;
+          size: 14px;
+        }
+        padding-bottom: 18px;
+        color: $table-gray;
+        &.content {
+          border-bottom: 1px solid $table-gray;
+        }
+      }
+    }
+    &.leader-price-row {
+      td {
+        text-align: center;
+        padding-top: 20px;
+        .price {
+          @include border-box;
+          padding-right: 23px;
+          float: left;
+          text-align: right;
+          width: 135px;
+          position: relative;
+          height: $cart-height;
+          line-height: $cart-height + 3;
+          color: $black;
+          font: {
+            family: "21_centbold";
+            size: 24px;
+            weight: bold;
+          }
+          &:before {
+            position: absolute;
+            right: 4px;
+            top: 13px;
+            content: "";
+            @include size(17px, 18px);
+            background: url(../images/rouble.png) no-repeat 0 0;
+          }
+        }
+        .cart {
+          @include size(143px, $cart-height);
+          display: block;
+          float: right;
+          background: url(../images/leader-cart.png) no-repeat 0 0;
+        }
+      }
+    }
+  }
+}
+
+%news-table-cell {
+  &.content {
+    background: $extralight-gray;
+  }
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  vertical-align: top;
+  padding: 15px 22px;
+  color: $black;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+
+.news-list {
+  @extend %basic-table;
+  tr {
+    &.img-row {
+      img {
+        @include size($basic-table-cell-w, $news-img-h);
+        vertical-align: top;
+        margin-bottom: 0;
+        display: inline-block;
+      }
+    }
+    &.news-name-row {
+      td {
+        @extend %news-table-cell;
+        line-height: 1.2;
+        font: {
+          family: "21_centbold";
+          size: 18px;
+          weight: bold;
+        }
+      }
+    }
+    &.news-text-row {
+      td {
+        padding: 0 22px 15px;
+        @extend %news-table-cell;
+        line-height: 1.5;
+        font: {
+          family: "21_cent";
+          size: 14px;
+        }
+      }
+    }
+  }
+
+}

@@ -8,6 +8,13 @@ $black: #333;
 $dropdown-w: 223px;
 $search-field-h: 67px;
 $search-field-w: 242px;
+$light-gray: #878787;
+$extralight-gray: #ddd;
+$pink: #ff595b;
+$another-gray: #f3f3f3;
+$light-black: #2F3238;
+$social-item-size: 45px;
+$section-title-block-w: 286px;
 //$screen-1280: 1280px;
 //$max-body-w: 1900px;
 //$main-h: 989px;
@@ -100,17 +107,6 @@ a {
   color: $base-color;
 }
 
-.btn {
-  text: {
-    align: center;
-    decoration: none;
-  }
-  &:hover {
-    text-decoration: underline;
-  }
-  display: inline-block;
-}
-
 .text-block {
   font: {
     family: "Circe-Light", sans-serif;
@@ -127,11 +123,34 @@ a {
 
 .section-title {
   line-height: 1.2;
-  font: {
-    family: "Circe-Bold", sans-serif;
-    size: 48px;
+  @extend %text-overflow;
+  text-align: left;
+  position: relative;
+  color: $light-black;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    @include size($section-title-block-w, 1px);
+    background: $light-black;
   }
+  font: {
+    family: "FranklinGothic-Book", sans-serif;;
+    size: 18px;
+  }
+  padding-bottom: 40px;
   text-transform: uppercase;
+}
+
+.cursive-title {
+  line-height: 1.2;
+  font: {
+    family: "21_centitalic";
+    style: italic;
+    size: 36px;
+  }
+  color: $black;
 }
 
 header {
@@ -204,6 +223,7 @@ header {
 }
 
 nav {
+  z-index: 11;
   position: relative;
   width: 100%;
   padding: 30px 0 35px;
@@ -308,5 +328,15 @@ nav {
         display: block;
       }
     }
+  }
+}
+
+.about-company {
+  text-align: center;
+  padding: 30px 0 40px;
+  .cursive-title {
+    display: inline-block;
+    max-width: 800px;
+    margin-bottom: 29px;
   }
 }

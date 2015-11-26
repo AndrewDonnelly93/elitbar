@@ -1,0 +1,21 @@
+$btn-h: 34px;
+$border: #838383;
+
+.btn {
+  display: inline-block;
+  height: $btn-h;
+  line-height: $btn-h - 1;
+  text: {
+    decoration: none;
+    align: center;
+  }
+  font: {
+    family: "FranklinGothic-Demi", sans-serif;
+    size: 18px;
+  }
+  @include border-box;
+  padding: 0 23px;
+  color: $black;
+  border: 1px solid $border;
+  @include border-radius(13px);
+}

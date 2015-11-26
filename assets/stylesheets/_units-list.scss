@@ -1,0 +1,82 @@
+$unit-picture-w: 152px;
+$units-item-w: 370px;
+$units-item-h: 253px;
+
+.units {
+  text-align: center;
+  padding: 45px 0 20px;
+  background: $extralight-gray;
+}
+
+.units-list {
+  display: inline-block;
+  vertical-align: top;
+  li {
+    position: relative;
+    vertical-align: top;
+    a {
+      @extend %full-size-absolute;
+      display: block;
+      z-index: 3;
+    }
+    display: inline-block;
+    @include size($units-item-w, $units-item-h);
+    background: $another-gray;
+    margin-bottom: 25px;
+    margin-right: 29px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    .unit-info {
+      z-index: 2;
+      @include size($units-item-w, $units-item-h);
+      position: relative;
+      @include border-box;
+      padding: 23px 20px 0;
+      color: $black;
+      .name {
+        text-transform: uppercase;
+        line-height: 1;
+        font: {
+          family: "FranklinGothic-Book", sans-serif;
+          size: 44px;
+        }
+      }
+      .description {
+        position: absolute;
+        line-height: 1.2;
+        max-width: 190px;
+        font: {
+          family: "21_centitalic";
+          style: italic;
+          size: 14px;
+        }
+        bottom: 30px;
+        left: 20px;
+      }
+    }
+    text-align: left;
+    .unit-picture {
+      @include size($unit-picture-w, 100%);
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url(../images/units/furniture.png) no-repeat 0 0;
+    }
+    &.chairs {
+      .unit-picture {
+        background: url(../images/units/chairs.png) no-repeat 0 0;
+      }
+    }
+    &.tables {
+      .unit-picture {
+        background: url(../images/units/tables.png) no-repeat 0 0;
+      }
+    }
+    &.cushioned-furniture {
+      .unit-picture {
+        background: url(../images/units/cushioned-furniture.png) no-repeat 0 0;
+      }
+    }
+  }
+}

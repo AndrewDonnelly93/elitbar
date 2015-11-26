@@ -1,0 +1,78 @@
+$input-h: 45px;
+$form-wrapper-w: 431px;
+$close-icon-size: 23px;
+
+form {
+  position: relative;
+  display: none;
+  width: 100%;
+  text-align: center;
+  &.active {
+    display: block;
+  }
+  .form-wrapper {
+    @include border-box;
+    position: relative;
+    width: $form-wrapper-w;
+    background: $base-color;
+    padding: 23px 33px 34px;
+    display: inline-block;
+    text-align: left;
+  }
+  .form-header {
+    font: {
+      family: "FranklinGothic-Demi", sans-serif;
+      size: 24px;
+    }
+    color: $black;
+    margin-bottom: 20px;
+  }
+  @include border-box;
+  input[type="text"],
+  input[type="phone"] {
+    @include border-box;
+    width: 100%;
+    display: block;
+    font: {
+      family: "FranklinGothic-Book", sans-serif;
+      size: 18px;
+    }
+    background: $extralight-gray;
+    padding: 0 25px;
+    color: $light-gray;
+    @include placeholder($light-gray);
+    height: $input-h;
+    margin-bottom: 20px;
+    line-height: normal;
+  }
+  .close-icon {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    @include size($close-icon-size, $close-icon-size);
+    background: url(../images/close-icon.png) 0 0 no-repeat;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  input[type="submit"] {
+    text-align: left;
+    @include border-box;
+    display: inline-block;
+    padding: 0 25px;
+    height: $input-h;
+    line-height: normal;
+    font: {
+      family: "FranklinGothic-Demi", sans-serif;
+      size: 18px;
+    }
+    background: $pink;
+  }
+}
+
+.callback-form {
+  position: absolute;
+  top: 232px;
+  z-index: 11;
+}
+

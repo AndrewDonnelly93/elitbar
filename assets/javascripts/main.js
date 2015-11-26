@@ -12,12 +12,52 @@
     });
   }
 
+  function createMap() {
+    var mapdiv = document.getElementById("map");
+    mapdiv.style.width = '50%';
+    mapdiv.style.height = '100%';
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 55.7545945, lng: 37.872545},
+      zoom: 14
+    });
+    var markerImage = {
+      url: "assets/images/marker.png"
+    };
+    var officeMarker = new google.maps.Marker({
+      position: {lat: 55.749483, lng: 37.865000},
+      icon: markerImage,
+      map: map
+    });
+    var storageMarker = new google.maps.Marker({
+      position: {lat: 55.758864, lng: 37.877173},
+      icon: markerImage,
+      map: map
+    });
+  }
+
+
+  function openCallbackForm() {
+    $(".contacts-form-ref").on("click", function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $(this).parents("body").find(".callback-form").addClass("active");
+    });
+    $(".callback-form .close-icon").on("click", function(e) {
+      e.preventDefault();
+      $(this).parents(".callback-form").removeClass("active");
+    });
+  }
+
   $(function () {
     // Инициализация выпадающего меню
     runOnLoad(Dropdown.initialise);
     // Открывание инпута с поиском
     if ($(".search-field").length) {
       openSearchInput();
+    }
+    // Инициализация карты
+    if ($("#map").length) {
+      createMap();
     }
     // Инициализация слайдера
     if ($(".slider").length) {
@@ -45,14 +85,17 @@
           button  : "#next"
         }
       });
-      $(".slider .slider-ref").hover(
-        function () {
-          $(".slider").trigger("stop");
-        },
-        function () {
-          $(".slider").trigger("play", true);
-        }
-      );
+      // Открывание и закрывание формы
+      if ($(".callback-form").length) {
+        openCallbackForm();
+        $(document).on("click", function(e) {
+          if (!$(e.target).parents(".callback-form").length) {
+            if ($(".callback-form").hasClass("active")) {
+              $(".callback-form").removeClass("active");
+            }
+          }
+        });
+      }
     }
   });
 })();
