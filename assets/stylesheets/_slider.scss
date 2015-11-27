@@ -64,12 +64,12 @@ $navigation-buttons-h: 68px;
 
 .prev-button {
   @extend %navigation-buttons;
-  background: url(../images/left-arrow.png) 0 0 no-repeat;
+  background: url(../images/sprite/sprite.png) 0 -117px no-repeat;
   left: 32px;
 }
 .next-button {
   @extend %navigation-buttons;
-  background: url(../images/right-arrow.png) 0 0 no-repeat;
+  background: url(../images/sprite/sprite.png) -33px -117px no-repeat;
   right: 32px;
 }
 

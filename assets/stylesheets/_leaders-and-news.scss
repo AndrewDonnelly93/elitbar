@@ -95,14 +95,14 @@ $cart-height: 44px;
             top: 13px;
             content: "";
             @include size(17px, 18px);
-            background: url(../images/rouble.png) no-repeat 0 0;
+            background: url(../images/sprite/sprite.png) -196px -70px no-repeat;
           }
         }
         .cart {
           @include size(143px, $cart-height);
           display: block;
           float: right;
-          background: url(../images/leader-cart.png) no-repeat 0 0;
+          background: url(../images/sprite/sprite.png) 0 0 no-repeat;
         }
       }
     }
@@ -139,6 +139,11 @@ $cart-height: 44px;
     }
     &.news-name-row {
       td {
+        a {
+          color: $black;
+          display: block;
+          text-decoration: none;
+        }
         @extend %news-table-cell;
         line-height: 1.2;
         font: {

@@ -50,7 +50,7 @@ form {
     top: 21px;
     right: 21px;
     @include size($close-icon-size, $close-icon-size);
-    background: url(../images/close-icon.png) 0 0 no-repeat;
+    background: url(../images/sprite/sprite.png) -170px -70px no-repeat;
     &:hover {
       cursor: pointer;
     }

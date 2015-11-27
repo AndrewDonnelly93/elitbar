@@ -23,18 +23,39 @@
     var markerImage = {
       url: "assets/images/marker.png"
     };
-    var officeMarker = new google.maps.Marker({
+    var infoOfficeWindow = new google.maps.InfoWindow({
+      content: "<div class='info-window'>МО, г. Реутов, Юбилейный пр-кт, д. 30/2</div>"
+    });
+    var infoStorageWindow = new google.maps.InfoWindow({
+      content: "<div class='info-window'>МО, г. Реутов, Никольская ул.</div>"
+    });
+    var officeMarker = new MarkerWithLabel({
       position: {lat: 55.749483, lng: 37.865000},
       icon: markerImage,
-      map: map
+      draggable: false,
+      raiseOnDrag: false,
+      map: map,
+      labelContent: "Офис",
+      labelAnchor: new google.maps.Point(-22, 25),
+      labelClass: "labels"
     });
-    var storageMarker = new google.maps.Marker({
+    google.maps.event.addListener(officeMarker, 'click', function() {
+      infoOfficeWindow.open(map, officeMarker);
+    });
+    var storageMarker = new MarkerWithLabel({
       position: {lat: 55.758864, lng: 37.877173},
       icon: markerImage,
-      map: map
+      draggable: false,
+      raiseOnDrag: false,
+      map: map,
+      labelContent: "Склад",
+      labelAnchor: new google.maps.Point(-22, 25),
+      labelClass: "labels"
+    });
+    google.maps.event.addListener(storageMarker, 'click', function() {
+      infoStorageWindow.open(map, storageMarker);
     });
   }
-
 
   function openCallbackForm() {
     $(".contacts-form-ref").on("click", function(e) {
@@ -49,6 +70,7 @@
   }
 
   $(function () {
+
     // Инициализация выпадающего меню
     runOnLoad(Dropdown.initialise);
     // Открывание инпута с поиском

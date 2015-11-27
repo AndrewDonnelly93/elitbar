@@ -5,7 +5,6 @@
   src: url("../fonts/21cent-webfont.eot") format("embedded-opentype"), url("../fonts/21cent-webfont.woff") format("woff"), url("../fonts/21cent-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: "21_centbold";
   src: url("../fonts/21cent-bold-webfont.eot") format("embedded-opentype");
@@ -13,7 +12,6 @@
   src: url("../fonts/21cent-bold-webfont.eot") format("embedded-opentype"), url("../fonts/21cent-bold-webfont.woff") format("woff"), url("../fonts/21cent-bold-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: "21_centitalic";
   src: url("../fonts/21cent-italic-webfont.eot") format("embedded-opentype");
@@ -21,7 +19,6 @@
   src: url("../fonts/21cent-italic-webfont.eot") format("embedded-opentype"), url("../fonts/21cent-italic-webfont.woff") format("woff"), url("../fonts/21cent-italic-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: "21_centbold";
   src: url("../fonts/21cent-bold-webfont.eot") format("embedded-opentype");
@@ -29,7 +26,6 @@
   src: url("../fonts/21cent-bold-webfont.eot") format("embedded-opentype"), url("../fonts/21cent-bold-webfont.woff") format("woff"), url("../fonts/21cent-bold-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: "FranklinGothic-Book";
   src: url("../fonts/FranklinGothic-Book.eot") format("embedded-opentype");
@@ -37,7 +33,6 @@
   src: url("../fonts/FranklinGothic-Book.eot") format("embedded-opentype"), url("../fonts/FranklinGothic-Book.woff") format("woff"), url("../fonts/FranklinGothic-Book.ttf") format("truetype"), url("../fonts/FranklinGothic-Book.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: "FranklinGothic-Demi";
   src: url("../fonts/FranklinGothic-Demi.eot") format("embedded-opentype");
@@ -45,7 +40,6 @@
   src: url("../fonts/FranklinGothic-Demi.eot") format("embedded-opentype"), url("../fonts/FranklinGothic-Demi.woff") format("woff"), url("../fonts/FranklinGothic-Demi.ttf") format("truetype"), url("../fonts/FranklinGothic-Demi.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 .section-title, nav .dropdown ul li a {
   overflow: hidden;
   white-space: nowrap;
@@ -76,7 +70,7 @@ textarea:-webkit-autofill:active {
 button {
   border: 0;
   outline: 0;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   outline-width: 0;
   background: 0; }
 
@@ -88,7 +82,7 @@ textarea {
   border: 0;
   outline: 0;
   outline-width: 0;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: transparent; }
 
 input[type="date"] {
   -webkit-align-items: center;
@@ -102,7 +96,7 @@ input[type="date"] {
   padding: 0 1em; }
 
 ::-webkit-datetime-edit-fields-wrapper {
-  background: white; }
+  background: #fff; }
 
 ::-webkit-datetime-edit-text {
   color: #333;
@@ -141,7 +135,7 @@ body {
   width: 100%;
   min-width: 1171px;
   max-width: 100%;
-  color: white;
+  color: #fff;
   font-family: "Circe-Regular", sans-serif;
   font-size: 14px;
   text-align: left; }
@@ -169,7 +163,7 @@ body {
   text-decoration: underline; }
 
 a {
-  color: white; }
+  color: #fff; }
 
 .text-block {
   font-family: "Circe-Light", sans-serif;
@@ -183,7 +177,7 @@ a {
   line-height: 1.2;
   text-align: left;
   position: relative;
-  color: #2f3238;
+  color: #2F3238;
   font-family: "FranklinGothic-Book", sans-serif;
   font-size: 18px;
   padding-bottom: 40px;
@@ -195,14 +189,14 @@ a {
     left: 0;
     width: 286px;
     height: 1px;
-    background: #2f3238; }
+    background: #2F3238; }
 
 .cursive-title {
   line-height: 1.2;
   font-family: "21_centitalic";
   font-style: italic;
   font-size: 36px;
-  color: #333333; }
+  color: #333; }
 
 header {
   position: relative;
@@ -227,7 +221,7 @@ header {
   header .contacts-form-ref {
     vertical-align: top;
     text-decoration: none;
-    color: white;
+    color: #fff;
     height: 34px;
     line-height: 33px;
     -webkit-border-radius: 13px;
@@ -237,7 +231,7 @@ header {
     font-family: "FranklinGothic-Demi", sans-serif;
     font-size: 18px;
     display: inline-block;
-    background: #333333;
+    background: #333;
     position: relative; }
   header .cart {
     display: block;
@@ -246,11 +240,11 @@ header {
     right: 10px;
     width: 80px;
     height: 67px;
-    background: url(../images/cart.png) 0 0 no-repeat; }
+    background: url(../images/sprite/sprite.png) 0 -47px no-repeat; }
     header .cart .products-in-cart {
       font-family: "FranklinGothic-Book", sans-serif;
       font-size: 14px;
-      color: white;
+      color: #fff;
       display: block;
       width: 27px;
       height: 27px;
@@ -284,7 +278,7 @@ nav {
       margin-right: 20px; }
       nav .dropdown > li a {
         display: block;
-        color: #333333;
+        color: #333;
         text-decoration: none;
         font-family: "FranklinGothic-Demi", sans-serif;
         font-size: 21px; }
@@ -298,7 +292,7 @@ nav {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      background: #333333;
+      background: #333;
       padding: 10px 20px 10px 25px; }
       nav .dropdown ul:before {
         content: "";
@@ -308,7 +302,7 @@ nav {
         height: 0;
         border-style: solid;
         border-width: 0 11px 11px 11px;
-        border-color: transparent transparent #333333 transparent;
+        border-color: transparent transparent #333 transparent;
         top: -11px; }
       nav .dropdown ul li {
         display: block;
@@ -319,7 +313,7 @@ nav {
           font-family: "21_centbold";
           font-size: 20px;
           font-weight: bold;
-          color: white; }
+          color: #fff; }
   nav .search-field {
     position: absolute;
     top: 11px;
@@ -337,7 +331,7 @@ nav {
       top: 0;
       right: 0;
       z-index: 2;
-      background: url(../images/search.png) 0 0 no-repeat; }
+      background: url(../images/sprite/sprite.png) -146px 0 no-repeat; }
     nav .search-field label {
       display: none; }
     nav .search-field input[type="search"] {
@@ -347,11 +341,11 @@ nav {
       -o-transition: all 1s ease-in-out;
       transition: all 1s ease-in-out;
       display: none;
-      background: #333333;
+      background: #333;
       font-family: "FranklinGothic-Demi", sans-serif;
       font-size: 21px;
       line-height: 67px;
-      color: white;
+      color: #fff;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -372,6 +366,38 @@ nav {
     display: inline-block;
     max-width: 800px;
     margin-bottom: 29px; }
+
+.labels {
+  position: relative;
+  margin-left: 7px;
+  background-color: rgba(51, 51, 51, 0.7);
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 26px;
+  font-family: "FranklinGothic-Demi", sans-serif;
+  font-size: 15px;
+  height: 26px;
+  padding: 0 13px;
+  text-align: center;
+  white-space: nowrap; }
+  .labels:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6.5px 7px 6.5px 0;
+    border-color: transparent rgba(51, 51, 51, 0.7) transparent transparent; }
+
+.info-window {
+  font-family: "FranklinGothic-Demi", sans-serif;
+  font-size: 15px;
+  color: #333; }
 
 .prev-button, .next-button {
   display: block;
@@ -423,11 +449,11 @@ nav {
         font-style: italic; }
 
 .prev-button {
-  background: url(../images/left-arrow.png) 0 0 no-repeat;
+  background: url(../images/sprite/sprite.png) 0 -117px no-repeat;
   left: 32px; }
 
 .next-button {
-  background: url(../images/right-arrow.png) 0 0 no-repeat;
+  background: url(../images/sprite/sprite.png) -33px -117px no-repeat;
   right: 32px; }
 
 .pagination {
@@ -444,16 +470,16 @@ nav {
     margin-right: 10px;
     width: 10px;
     height: 10px;
-    background: #333333;
+    background: #333;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%; }
     .pagination a:last-child {
       margin-right: 0; }
     .pagination a:hover {
-      background: white; }
+      background: #fff; }
     .pagination a.selected {
-      background: white; }
+      background: #fff; }
 
 form {
   position: relative;
@@ -471,14 +497,14 @@ form {
     box-sizing: border-box;
     position: relative;
     width: 431px;
-    background: white;
+    background: #fff;
     padding: 23px 33px 34px;
     display: inline-block;
     text-align: left; }
   form .form-header {
     font-family: "FranklinGothic-Demi", sans-serif;
     font-size: 24px;
-    color: #333333;
+    color: #333;
     margin-bottom: 20px; }
   form input[type="text"],
   form input[type="phone"] {
@@ -489,7 +515,7 @@ form {
     display: block;
     font-family: "FranklinGothic-Book", sans-serif;
     font-size: 18px;
-    background: #dddddd;
+    background: #ddd;
     padding: 0 25px;
     color: #878787;
     height: 45px;
@@ -510,7 +536,7 @@ form {
     right: 21px;
     width: 23px;
     height: 23px;
-    background: url(../images/close-icon.png) 0 0 no-repeat; }
+    background: url(../images/sprite/sprite.png) -170px -70px no-repeat; }
     form .close-icon:hover {
       cursor: pointer; }
   form input[type="submit"] {
@@ -543,7 +569,7 @@ form {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 23px;
-  color: #333333;
+  color: #333;
   border: 1px solid #838383;
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
@@ -552,7 +578,7 @@ form {
 .units {
   text-align: center;
   padding: 45px 0 20px;
-  background: #dddddd; }
+  background: #ddd; }
 
 .units-list {
   display: inline-block;
@@ -581,7 +607,7 @@ form {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       padding: 23px 20px 0;
-      color: #333333; }
+      color: #333; }
       .units-list li .unit-info .name {
         text-transform: uppercase;
         line-height: 1;
@@ -612,12 +638,12 @@ form {
 
 .leaders-and-news {
   padding: 86px 0;
-  background: white; }
+  background: #fff; }
   .leaders-and-news .sales-leaders {
     padding-bottom: 80px; }
 
 .sales-leaders-list, .news-list {
-  background: white;
+  background: #fff;
   text-align: left;
   table-layout: fixed;
   width: 100%; }
@@ -641,7 +667,7 @@ form {
   vertical-align: top;
   text-transform: uppercase;
   padding: 10px;
-  color: #333333;
+  color: #333;
   font-family: "21_centbold";
   font-size: 18px;
   font-weight: bold; }
@@ -669,7 +695,7 @@ form {
     position: relative;
     height: 44px;
     line-height: 47px;
-    color: #333333;
+    color: #333;
     font-family: "21_centbold";
     font-size: 24px;
     font-weight: bold; }
@@ -680,13 +706,13 @@ form {
       content: "";
       width: 17px;
       height: 18px;
-      background: url(../images/rouble.png) no-repeat 0 0; }
+      background: url(../images/sprite/sprite.png) -196px -70px no-repeat; }
   .sales-leaders-list tr.leader-price-row td .cart {
     width: 143px;
     height: 44px;
     display: block;
     float: right;
-    background: url(../images/leader-cart.png) no-repeat 0 0; }
+    background: url(../images/sprite/sprite.png) 0 0 no-repeat; }
 
 .news-list tr.news-name-row td, .news-list tr.news-text-row td {
   word-wrap: break-word;
@@ -694,14 +720,14 @@ form {
   word-break: break-all;
   vertical-align: top;
   padding: 15px 22px;
-  color: #333333;
+  color: #333;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   -o-hyphens: auto;
   hyphens: auto; }
   .news-list tr.news-name-row td.content, .news-list tr.news-text-row td.content {
-    background: #dddddd; }
+    background: #ddd; }
 
 .news-list tr.img-row img {
   width: 286px;
@@ -714,6 +740,10 @@ form {
   font-family: "21_centbold";
   font-size: 18px;
   font-weight: bold; }
+  .news-list tr.news-name-row td a {
+    color: #333;
+    display: block;
+    text-decoration: none; }
 .news-list tr.news-text-row td {
   padding: 0 22px 15px;
   line-height: 1.5;
@@ -725,12 +755,12 @@ form {
   .our-contacts-table .contacts-info {
     padding: 44px 0 23px;
     width: 50%;
-    background: #dddddd;
+    background: #ddd;
     text-align: right; }
     .our-contacts-table .contacts-info .location {
       width: 33px;
       height: 45px;
-      background: url(../images/location.png) 0 0 no-repeat;
+      background: url(../images/sprite/sprite.png) -66px -117px no-repeat;
       margin: 0 auto 37px; }
     .our-contacts-table .contacts-info .logo {
       width: 261px;
@@ -740,7 +770,7 @@ form {
     .our-contacts-table .contacts-info .contacts-list {
       list-style: none;
       margin-bottom: 38px;
-      color: #333333;
+      color: #333;
       font-family: "FranklinGothic-Book", sans-serif;
       font-size: 18px; }
       .our-contacts-table .contacts-info .contacts-list li {
@@ -756,7 +786,7 @@ form {
       padding-right: 125px; }
     .our-contacts-table .contacts-info .copyright {
       line-height: 1.8;
-      color: #333333;
+      color: #333;
       font-family: "FranklinGothic-Book", sans-serif;
       font-size: 12px; }
       .our-contacts-table .contacts-info .copyright .current-date {
@@ -780,4 +810,6 @@ form {
       width: 45px;
       height: 45px; }
       .social-list li .social-btn.fb {
-        background: url("../images/fb.png") no-repeat 0 0; }
+        background: url(../images/sprite/sprite.png) -83px -47px no-repeat; }
+
+/*# sourceMappingURL=main.css.map */

@@ -9,7 +9,7 @@ $contacts-info-wrapper-w: 450px;
     text-align: right;
     .location {
       @include size(33px, 45px);
-      background: url(../images/location.png) 0 0 no-repeat;
+      background: url(../images/sprite/sprite.png) -66px -117px no-repeat;
       margin: 0 auto 37px;
     }
     .logo {
@@ -76,7 +76,7 @@ $contacts-info-wrapper-w: 450px;
       display: block;
       @include size($social-item-size,$social-item-size);
       &.fb {
-        background: url("../images/fb.png") no-repeat 0 0;
+        background: url(../images/sprite/sprite.png) -83px -47px no-repeat;
       }
     }
   }

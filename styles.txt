@@ -1,0 +1,94 @@
+http://code.stephenmorley.org/javascript/touch-friendly-drop-down-menus/
+/* Style for &lt;Path&gt; */
+width: 1601px;
+height: 89px;
+#683817
+franklin gothic demi 300 + book
+21Cent +  italic + bold
+
+/* Style for лого
+width: 143px;
+height: 45px;
+/* Style for "99" */
+color: #FFF;
+font-family: "Franklin Gothic Book";
+font-size: 14px;
+font-weight: 400;
+/* Style for "+7 (495) 150 06 46" */
+color: #FFF;
+font-family: "FranklinGothic"; demi
+font-size: 21px;
+font-weight: 300;
+
+/* Style for "обратный звонок
+color: #FFF;
+font-family: "FranklinGothic"; demi
+font-size: 18px;
+font-weight: 300;
+
+/* Style for "меню
+color: #333;
+font-family: "FranklinGothic"; demi
+font-size: 21px;
+font-weight: 300;
+компания, склад, проекты, дилерам, каталог, контакты
+/* Style for стулья
+#333333
+color: #FFF;
+font-family: "21Cent";
+font-size: 20px;
+font-weight: 700;
+
+/* Style for "┬лAUGUSTA LUXE┬╗" */
+color: #FFF;
+font-family: "FranklinGothic"; demi
+font-size: 48px;
+font-weight: 300;
+
+/* Style for диван
+color: #FFF;
+font-family: "21Cent";
+font-size: 24px;
+font-style: italic;
+
+
+/* Style for   форма
+width: 431px;
+height: 276px;
+f3f3f3 фон
+
+обратный звонок
+color: #333;
+font-family: "FranklinGothic";
+font-size: 24px;
+font-weight: 300
+
+/* Style for ваш звонок
+dddddd фон инпутов
+color: #878787;
+font-family: "Franklin Gothic Book";
+font-size: 18px;
+font-weight: 400;;
+
+/* Style for перезвоните мне
+color: #333;
+font-family: "Franklin Gothic Demi";
+font-size: 24px;
+font-weight: 400;
+
+/* Style for "Elitbar тАФ     " */
+color: #333;
+font-family: "21 Cent";
+font-size: 36px;
+font-style: italic;
+Elitbar — тезисно о компании самое важное.
+Тезисно о компании самое важное
+
+
+/* Style for о компании
+color: #333;
+font-family: "Franklin Gothic Demi";
+font-size: 18px;
+font-weight: 400;
+
+838383 бордер баттона
